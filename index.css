@@ -1,0 +1,132 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for better content visibility */
+    min-height: 100vh;
+    padding: 2rem 1rem; /* Add padding for mobile */
+    box-sizing: border-box;
+}
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem; /* More rounded corners */
+    padding: 2.5rem;
+    max-width: 900px; /* Max width for larger screens */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.text-display {
+    font-size: 1.75rem; /* Larger font size for readability */
+    line-height: 1.6;
+    min-height: 120px; /* Ensure consistent height */
+    background-color: #e2e8f0; /* Light blue-gray background */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    overflow-wrap: break-word; /* Ensure long words wrap */
+    /* Removed: word-break: break-all; */ /* This was causing words to break mid-word */
+    white-space: pre-wrap; /* Preserve whitespace and wrap */
+}
+.text-display span.correct {
+    color: #10b981; /* Green for correct characters */
+}
+.text-display span.incorrect {
+    color: #ef4444; /* Red for incorrect characters */
+    text-decoration: underline; /* Underline incorrect characters */
+}
+.text-display span.current {
+    background-color: #bfdbfe; /* Light blue for current character */
+    border-radius: 0.25rem;
+    padding: 0 0.1rem;
+}
+.text-input {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #cbd5e1; /* Light gray border */
+    border-radius: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+}
+.text-input:focus {
+    border-color: #3b82f6; /* Blue border on focus */
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid for stats */
+    gap: 1rem;
+}
+.stat-item {
+    background-color: #f8fafc; /* Lighter background for stats */
+    padding: 1rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.stat-item .value {
+    font-size: 2.25rem; /* Larger value font */
+    font-weight: 700;
+    color: #1e293b; /* Darker text */
+}
+.stat-item .label {
+    font-size: 0.9rem;
+    color: #64748b; /* Gray text */
+    margin-top: 0.25rem;
+}
+.lesson-buttons button {
+    background-color: #3b82f6; /* Blue background */
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.lesson-buttons button:hover {
+    background-color: #2563eb; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+.lesson-buttons button:active {
+    background-color: #1d4ed8; /* Even darker blue on active */
+    transform: translateY(0);
+}
+.lesson-buttons button.active {
+    background-color: #1d4ed8; /* Active lesson button style */
+    border: 2px solid #bfdbfe;
+}
+.reset-button {
+    background-color: #ef4444; /* Red for reset */
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.reset-button:hover {
+    background-color: #dc2626; /* Darker red on hover */
+    transform: translateY(-2px);
+}
+.reset-button:active {
+    background-color: #b91c1c; /* Even darker red on active */
+    transform: translateY(0);
+}
+.message-box {
+    min-height: 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+.message-box.success {
+    color: #10b981;
+    background-color: #d1fae5;
+}
+.message-box.error {
+    color: #ef4444;
+    background-color: #fee2e2;
+}
