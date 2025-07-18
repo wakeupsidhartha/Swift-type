@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step-by-Step Typing Practice</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Link to external CSS file (will be provided separately) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-4">Typing Practice</h1>
+
+        <!-- Lesson Selection -->
+        <div class="lesson-buttons flex flex-wrap justify-center gap-3 mb-4">
+            <button id="lesson-home-row" class="active" data-lesson-id="0">Home Row (asdf jkl;)</button>
+            <button id="lesson-top-row" data-lesson-id="1">Top Row (qwerty uiop)</button>
+            <button id="lesson-bottom-row" data-lesson-id="2">Bottom Row (zxcvbnm,./)</button>
+            <button id="lesson-all-letters" data-lesson-id="3">All Letters (a-z)</button>
+            <button id="lesson-common-words" data-lesson-id="4">Common Words</button>
+            <button id="lesson-sentences" data-lesson-id="5">Sentences</button>
+        </div>
+
+        <!-- Text Display Area -->
+        <div id="text-display" class="text-display"></div>
+
+        <!-- User Input -->
+        <input type="text" id="text-input" class="text-input" placeholder="Start typing here..." autofocus>
+
+        <!-- Stats Display -->
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div id="wpm-value" class="value">0</div>
+                <div class="label">WPM</div>
+            </div>
+            <div class="stat-item">
+                <div id="accuracy-value" class="value">0%</div>
+                <div class="label">Accuracy</div>
+            </div>
+            <div class="stat-item">
+                <div id="errors-value" class="value">0</div>
+                <div class="label">Errors</div>
+            </div>
+            <div class="stat-item">
+                <div id="time-value" class="value">0s</div>
+                <div class="label">Time</div>
+            </div>
+        </div>
+
+        <!-- Message Box -->
+        <div id="message-box" class="message-box hidden"></div>
+
+        <!-- Reset Button -->
+        <button id="reset-button" class="reset-button mt-4">Reset</button>
+    </div>
+
+    <!-- Link to external JavaScript file (will be provided separately) -->
+    <script src="script.js"></script>
+</body>
+</html>
